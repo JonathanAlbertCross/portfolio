@@ -1,8 +1,15 @@
 import Image from "next/image";
+import "../app/globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: "100",
+});
 
 export default function Home() {
   return (
-    <main>
+    <main className={inter.className}>
       <nav>
         <Image src="/rock.png" alt=" Logo" width={50} height={37} priority />
         <ul>
