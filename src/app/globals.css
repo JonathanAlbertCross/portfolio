@@ -6,13 +6,6 @@ body {
   background-color: #583f88;
 }
 
-nav,
-li,
-ul {
-  background-color: #25114a;
-  color: #f3f3f3;
-}
-
 .some-page-wrapper {
   margin: 15px;
   background-color: red;
@@ -40,4 +33,72 @@ ul {
 .green-column {
   background-color: #583f88;
   height: 600px;
+}
+
+/* Reset some default styles */
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Style the navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #25114a;
+  padding: 10px;
+}
+
+/* Style the logo image */
+nav img {
+  display: block;
+}
+
+/* Style the navigation menu */
+ul {
+  display: flex;
+}
+
+ul li {
+  margin-right: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Style the hamburger icon */
+nav img:last-child {
+  display: none; /* Hide the hamburger icon by default for larger screens */
+  cursor: pointer;
+}
+
+/* Media query to show/hide hamburger icon based on screen width */
+@media only screen and (max-width: 768px) {
+  ul {
+    display: none; /* Hide the navigation menu by default for smaller screens */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+
+  ul.show {
+    display: flex; /* Show the navigation menu when the class 'show' is added */
+  }
+
+  ul li {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav img:last-child {
+    display: block; /* Show the hamburger icon for smaller screens */
+  }
 }
