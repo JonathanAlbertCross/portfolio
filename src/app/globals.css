@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+content: [ "./pages/**/*.tsx", "./components/**/*.tsx", ], body {
   background-color: #583f88;
 }
 
