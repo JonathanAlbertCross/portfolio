@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "../app/globals.css";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,28 +11,33 @@ const inter = Inter({
 export default function Home() {
   return (
     <main className={inter.className}>
-      <nav>
+      {/*   <nav>
         <Image src="/rock.png" alt=" Logo" width={50} height={37} priority />
+
         <ul>
-          <li>PROJECTS</li>
+          <Link href="/projects">
+            <li>PROJECTS</li>
+          </Link>
+
           <li>ABOUT</li>
           <li>CONTACT</li>
         </ul>
         <Image
           src="/hamburger_red.png"
-          alt=" hamburger"
+          alt="hamburger"
           width={26}
           height={37}
           priority
         />
       </nav>
+      */}
       <div className="some-page-wrapper">
         <div className="row">
           <div className="column">
-            <div className="blue-column">
-              Some Text in Column One
+            <div className="centeredContent">
+              {/*  <div className="blue-column"> */}{" "}
               <Image
-                src="/rock.png"
+                src="/fullLogo.png"
                 alt=" Logo"
                 width={500}
                 height={37}
@@ -39,9 +45,10 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="column">
-            <div className="green-column">Some Text in Column Two</div>
-          </div>
+        </div>
+        <div className="column">
+          {/*   <div className="green-column"></div>*/}
+          {/*  </div>*/}
         </div>
       </div>
     </main>
